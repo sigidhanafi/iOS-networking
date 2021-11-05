@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AE29F6173F5DD25F9F89E7F7 /* Pods_iOSNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40FB3498D5E0244DDD4769D2 /* Pods_iOSNetworking.framework */; };
+		D87991F12734B60800B7E3F2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87991F02734B60800B7E3F2 /* ViewModel.swift */; };
+		D87991F32734B7A400B7E3F2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87991F22734B7A400B7E3F2 /* NetworkService.swift */; };
+		D87991F72734BCF400B7E3F2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87991F62734BCF400B7E3F2 /* Movie.swift */; };
 		D88D0BE12730AD7900627442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D0BE02730AD7900627442 /* AppDelegate.swift */; };
 		D88D0BE32730AD7900627442 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D0BE22730AD7900627442 /* SceneDelegate.swift */; };
 		D88D0BE52730AD7900627442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D0BE42730AD7900627442 /* ViewController.swift */; };
@@ -19,6 +22,9 @@
 		1645090D43C5464FC91256DA /* Pods-iOSNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNetworking.debug.xcconfig"; path = "Target Support Files/Pods-iOSNetworking/Pods-iOSNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 		40FB3498D5E0244DDD4769D2 /* Pods_iOSNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF0B23C960838A6F7C5276F /* Pods-iOSNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNetworking.release.xcconfig"; path = "Target Support Files/Pods-iOSNetworking/Pods-iOSNetworking.release.xcconfig"; sourceTree = "<group>"; };
+		D87991F02734B60800B7E3F2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D87991F22734B7A400B7E3F2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D87991F62734BCF400B7E3F2 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		D88D0BDD2730AD7900627442 /* iOSNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88D0BE02730AD7900627442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D88D0BE22730AD7900627442 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,8 +60,23 @@
 				1645090D43C5464FC91256DA /* Pods-iOSNetworking.debug.xcconfig */,
 				7DF0B23C960838A6F7C5276F /* Pods-iOSNetworking.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D87991F42734BCAC00B7E3F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D87991F62734BCF400B7E3F2 /* Movie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D87991F52734BCB800B7E3F2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D87991F22734B7A400B7E3F2 /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		D88D0BD42730AD7900627442 = {
@@ -79,9 +100,12 @@
 		D88D0BDF2730AD7900627442 /* iOSNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				D87991F52734BCB800B7E3F2 /* Services */,
+				D87991F42734BCAC00B7E3F2 /* Models */,
 				D88D0BE02730AD7900627442 /* AppDelegate.swift */,
 				D88D0BE22730AD7900627442 /* SceneDelegate.swift */,
 				D88D0BE42730AD7900627442 /* ViewController.swift */,
+				D87991F02734B60800B7E3F2 /* ViewModel.swift */,
 				D88D0BE92730AD7B00627442 /* Assets.xcassets */,
 				D88D0BEB2730AD7B00627442 /* LaunchScreen.storyboard */,
 				D88D0BEE2730AD7B00627442 /* Info.plist */,
@@ -203,8 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87991F32734B7A400B7E3F2 /* NetworkService.swift in Sources */,
 				D88D0BE52730AD7900627442 /* ViewController.swift in Sources */,
+				D87991F72734BCF400B7E3F2 /* Movie.swift in Sources */,
 				D88D0BE12730AD7900627442 /* AppDelegate.swift in Sources */,
+				D87991F12734B60800B7E3F2 /* ViewModel.swift in Sources */,
 				D88D0BE32730AD7900627442 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,20 @@
 
 import Foundation
 
-internal struct Movie {
+internal struct MovieResponse: Decodable {
+    internal let data: [Movie]
+    
+    enum CodingKeys: String, CodingKey {
+        case data = "results"
+    }
+}
+
+internal struct Movie: Decodable {
     internal let title: String
     internal let overview: String
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case overview
+    }
 }

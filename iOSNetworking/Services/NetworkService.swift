@@ -15,7 +15,7 @@ protocol NetworkServiceProtocol {
 class NetworkService: NetworkServiceProtocol {
     func fetchPopularMovies(onSuccess: @escaping ([Movie]) -> Void) {
         
-        AF.request("https://api.themoviedb.org/3/movie/popular?api_key=")
+        AF.request("https://api.themoviedb.org/3/movie/popular?api_key=9d2a61648c32785276abeaee4471a2f9")
             .validate()
             .responseDecodable(of: MovieResponse.self) { response in
                 guard let response = response.value else { return }

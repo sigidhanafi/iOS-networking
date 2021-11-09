@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private var tableView: UITableView!
+    private var tableView = UITableView()
     
-    private var viewModel: ViewModel!
+    private var viewModel = ViewModel()
     
     private var movies = [Movie]()
 
@@ -19,18 +19,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        view.backgroundColor = .white
+        setupView()
         
         setupTableView()
         
         setupViewModel()
-        
-        setupView()
     }
     
     private func setupView() {
+        // set common view
+        view.backgroundColor = .white
+        title = "Movie List"
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+        // add table view to view
         view.addSubview(tableView)
         
+        // setting tableview constraint
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
@@ -39,8 +44,7 @@ class ViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView = UITableView()
-        
+        // set delegate and datasource
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -49,8 +53,6 @@ class ViewController: UIViewController {
     }
     
     private func setupViewModel() {
-        viewModel = ViewModel()
-        
         // trigger load
         viewModel.didLoadTrigger()
         
